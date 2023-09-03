@@ -64,8 +64,8 @@ plt.rcParams['font.sans-serif'] = ['SimHei']
 fontdict = {'weight': 'normal', 'family': 'Times New Roman', 'size': 20}
 fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 x = np.arange(1, 121)
-axes[0].plot(x, plain18, 'g', label="plain18")
-axes[0].plot(x, plain34, 'r', label="plain34")
+axes[0].plot(x, plain18, 'g', label="plain18", c="grey", ls="--")
+axes[0].plot(x, plain34, 'r', label="plain34", c="grey")
 axes[0].legend()
 # 开启网格
 axes[0].grid(True)
@@ -73,10 +73,10 @@ axes[0].set_title('验证集上的正确率')
 axes[0].set_xlabel("训练轮数")
 axes[0].set_ylabel("正确率")
 
-axes[1].plot(x, resnet18, label="resnet18")
-axes[1].plot(x, resnet34, label="resnet34")
-axes[1].plot(x, resnet50, label="resnet50")
-axes[1].plot(x, resnet101, label="resnet101")
+axes[1].plot(x, resnet18, label="resnet18", c="grey", ls="-")
+axes[1].plot(x, resnet34, label="resnet34", c="grey", ls="--")
+axes[1].plot(x, resnet50, label="resnet50", c="grey", ls=":")
+axes[1].plot(x, resnet101, label="resnet101", c="grey", ls="-.")
 axes[1].legend()
 # 开启网格
 axes[1].grid(True)
